@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style='width: 250px;'>
+
+    <div id = 'initial content' style=' display: flex; justify-content: center; flex-wrap: wrap'>
+        <div class="spinner-border text-danger" role="status" style='margin-top: 10px; width: 1.5rem; height: 1.5rem;'>
+            <span class="sr-only">Loading...</span>
+        </div>
+        <p style='margin-top: 9px; margin-left: 22px; margin-right: 25px;'>Performing Analysis...</p>
+    </div>
+    <div id='reload-message' style="display: none; font-size: 18px; margin-left: 15px; margin-bottom: 10px; margin-top: 10px; margin-right: 15px;"><b>Error:</b> must be on a YouTube Video page)</div>
+    <div id='sentiment-analysis' style = 'display: none;'>
+        <div style='margin-left: 4px;'><b>Sentiment: </b><span id='sentiment-score'>0.__</span></div>
+        <br>
+        <div id='score-2' style="margin-left: 200px"></div>
+        <div style=' display: flex; justify-content: center; flex-wrap: wrap'>
+            <span>0</span>
+            <input id='score-slider' type="range" min="0" max="1000" value="50" style='width: 175px; margin-left: 15px; margin-right: 15px'>
+            <span>1</span>
+        </div>
+        <div style=' display: flex; justify-content: left; flex-wrap: wrap'>
+            <span>Negative</span>
+            <span style="margin-left: 36px; margin-right: 36px;">Neutral</span>
+            <span>Positive</span>
+        </div>
+        <br>
+        <div id="comments">
+            <button type="button" id='show-comments' class="btn btn-outline-secondary" style='height:20px; font-size: 12px; line-height: 12px; width: 230px; margin-left: 10px; box-shadow: none; text-shadow: none;'>Show Analysis per Commet</button>
+        </div>
+        <br>
+        <div><b style="font-size: 15px; margin-left: 4px; margin-bottom: 20px;">Comments Analyzed: </b><span id='comments-analyzed'></span></div>
+    </div>
+    <script src="popup.js"></script>
+
+</body>
+</html>
